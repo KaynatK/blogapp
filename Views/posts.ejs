@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="heading">
+        <h1>Welcome to MINI Blog POSTS page</h1>
+        <a class="btn btn_success" href="/article/new">Write an Article</a>
+    </div>
+</div>
+<div>
+    <section>
+
+        <% for(var i=0; i < data.length; i++) { %>
+            <article>
+                <p>
+                    <%= data[i].slug %>
+                </p>
+                <h2>
+                    <%= data[i].title %>
+                </h2>
+                <div class="card"><p>
+                    <%= data[i].description %>
+                </p>
+                </div>
+               <p>
+                    <%= data[i].info %>
+                </p>
+                <p>
+                   <%= data[i].author %>
+                </p>
+            </article>
+            <% } %>
+        </section>
+</div>
