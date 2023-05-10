@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="heading">
+        <h2>Login Page</h2>
+        <a class="btn btn_success" href="/user/loginpage">Login</a>
+    </div>
+</div>
+<div>
+    <section>
+
+        <% for(var i=0; i < data.length; i++) { %>
+            <article>
+                <p>
+                    <%= data[i].email %>
+                </p>
+                <p>
+                    <%= data[i].password %>
+                </p>
+            </article>
+            <% } %>
+        </section>
+</div>
