@@ -1,0 +1,32 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="John Doe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+<div class="container">
+    <div class ="heading">
+        <h1>Welcome to MINI Blog</h1>
+        <a class ="btn btn_success" href="/article/new">Write an Article</a>
+        <a class ="btn btn_success" href="/user/loginpage">Login</a>
+    </div>
+    <div class="blog">
+        <% Article.forEach(element => {%>
+          <div class="blog-item">
+           <h3><%= element.title %></h3>
+           <p><%= element.description %></p>
+           <h5><i><%= element.createdAt.toLocalDataString() %></i></h5>
+           <p><%=element.author%></p>
+
+          </div>
+
+
+       <% }:%>)
+       <div class="card">
+        <h2><%= title %></h2>
+        <p><%= description %></p>
+        </div>
+
+    </div>
+</div>
